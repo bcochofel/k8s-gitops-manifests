@@ -7,7 +7,8 @@ project adheres to [Semantic Versioning](http://semver.org/).
 
 <a name="unreleased"></a>
 ## [Unreleased]
-
+FEATURES:
+- metallb HelmRelease
 
 
 <a name="v0.3.0"></a>
