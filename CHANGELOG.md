@@ -7,6 +7,9 @@ project adheres to [Semantic Versioning](http://semver.org/).
 
 <a name="unreleased"></a>
 ## [Unreleased]
+BUG FIXES:
+- metallb namespace
+
 FEATURES:
 - metallb HelmRelease
 
