@@ -1,0 +1,28 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tools
+  labels:
+    app: tools
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: tools
+  template:
+    metadata:
+      labels:
+        app: tools
+    spec:
+      containers:
+        - name: dnsutils
+          image: gcr.io/kubernetes-e2e-test-images/dnsutils:1.1
+          imagePullPolicy: IfNotPresent
+          command:
+            - sleep
+            - "3600"
+        - name: busybox
+          image: busybox:1.30.0
+          imagePullPolicy: IfNotPresent
+          command: ['sh', '-c', 'echo Container 1 is Running ; sleep 3600']
