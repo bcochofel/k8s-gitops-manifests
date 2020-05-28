@@ -9,5 +9,5 @@ roleRef:
   kind: ClusterRole
   name: cluster-admin
 subjects:
-  - name: default:kubeapps-operator
+  - name: kubeapps-operator
     kind: ServiceAccount
