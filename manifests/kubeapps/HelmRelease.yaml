@@ -1,0 +1,11 @@
+---
+apiVersion: helm.fluxcd.io/v1
+kind: HelmRelease
+metadata:
+  name: kubeapps
+spec:
+  releaseName: kubeapps
+  chart:
+    repository: https://charts.bitnami.com/bitnami/
+    name: kubeapps
+    version: 3.6.0

@@ -1,0 +1,13 @@
+---
+# ClusterRoleBinding
+apiVersion: rbac.authorization.k8s.io/v1beta1
+kind: ClusterRoleBinding
+metadata:
+  name: kubeapps-operator
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: cluster-admin
+subjects:
+  - name: default:kubeapps-operator
+    kind: ServiceAccount
