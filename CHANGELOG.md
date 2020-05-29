@@ -9,7 +9,6 @@ project adheres to [Semantic Versioning](http://semver.org/).
 ## [Unreleased]
 FEATURES:
 - flagger
-- kubeapps
 - tools deployment, busybox + dnsutils
 - metallb HelmRelease
 
@@ -33,8 +32,3 @@ DOCS:
 ## v0.1.0 - 2020-05-23
 FEATURES:
 - initial commit
-
-
-[Unreleased]: https://github.com/terraform-aws-modules/terraform-aws-eks/compare/v0.3.0...HEAD
-[v0.3.0]: https://github.com/terraform-aws-modules/terraform-aws-eks/compare/v0.2.0...v0.3.0
-[v0.2.0]: https://github.com/terraform-aws-modules/terraform-aws-eks/compare/v0.1.0...v0.2.0
