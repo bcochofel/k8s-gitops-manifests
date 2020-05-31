@@ -16,4 +16,4 @@ Most of the manifests use Helm Operator, so you need to have that installed on y
 To use some of the manifests on this repository you need to have [Helm
 Operator](https://github.com/fluxcd/helm-operator).
 
-The directory `kustomize/` has scenarios that you can use and it needs [Kustomize](https://github.com/kubernetes-sigs/kustomize)
+The directory `kustomize/` has scenarios that you can use and it needs [Kustomize](https://github.com/kubernetes-sigs/kustomize).
