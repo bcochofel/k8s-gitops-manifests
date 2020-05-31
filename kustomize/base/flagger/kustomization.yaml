@@ -1,0 +1,4 @@
+resources:
+- flagger-crd.yaml
+- flagger.yaml
+- flagger-loadtester.yaml
