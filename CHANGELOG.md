@@ -7,6 +7,9 @@ project adheres to [Semantic Versioning](http://semver.org/).
 
 <a name="unreleased"></a>
 ## [Unreleased]
+ENHANCEMENTS:
+- manifests refactoring for kustomize
+
 FEATURES:
 - github workflows
 - support for kustomize

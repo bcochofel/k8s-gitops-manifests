@@ -1,6 +1,0 @@
-namespace: metallb
-commonLabels:
-  app: metallb
-resources:
-- metallb-ns.yaml
-- metallb.yaml

@@ -1,0 +1,7 @@
+namespace: flagger-system
+resources:
+  - namespace.yaml
+bases:
+  - ../../base/flagger/
+patchesStrategicMerge:
+  - patch.yaml
