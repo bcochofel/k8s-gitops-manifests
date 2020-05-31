@@ -1,3 +1,3 @@
-# Manifests using Kustomize
+# Scenarios using Kustomize
 
-https://github.com/kubernetes-sigs/kustomize
+## Traefik
