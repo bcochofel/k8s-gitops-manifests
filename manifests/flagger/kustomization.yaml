@@ -1,0 +1,8 @@
+namespace: flagger-system
+commonLabels:
+  app: flagger
+resources:
+- flagger-ns.yaml
+- flagger-crd.yaml
+- flagger.yaml
+- flagger-loadtester.yaml
