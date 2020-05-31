@@ -15,5 +15,5 @@ jobs:
           # https://github.com/fluxcd/helm-operator/blob/master/docker/helm.version
           helm: 2.14.3
           command: |
-            echo "Validating flagger"
-            kustomize build manifests/flagger | kubeval --strict --ignore-missing-schemas
+            echo "Validating kustomize traefik..."
+            kustomize build kustomize/traefik | kubeval --strict --ignore-missing-schemas
