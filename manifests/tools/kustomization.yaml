@@ -1,6 +1,0 @@
-namespace: tools
-commonLabels:
-  app: tools
-resources:
-- tools.ns.yaml
-- Deployment.yaml
