@@ -1,0 +1,11 @@
+---
+apiVersion: helm.fluxcd.io/v1
+kind: HelmRelease
+metadata:
+  name: jaeger-operator
+spec:
+  releaseName: jaeger-operator
+  chart:
+    repository: https://jaegertracing.github.io/helm-charts
+    name: jaeger-operator
+    version: 2.15.0

@@ -31,9 +31,6 @@ spec:
           type: prometheus
           url: http://prometheus-operated:9090
           access: proxy
-        - name: Loki
-          type: Loki
-          url: http://loki:3100
     prometheus:
       prometheusSpec:
         scrapeInterval: 15s
