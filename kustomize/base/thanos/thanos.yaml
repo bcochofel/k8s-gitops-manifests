@@ -1,0 +1,11 @@
+---
+apiVersion: helm.fluxcd.io/v1
+kind: HelmRelease
+metadata:
+  name: thanos
+spec:
+  releaseName: thanos
+  chart:
+    repository: https://kubernetes-charts.banzaicloud.com
+    name: thanos
+    version: 0.3.21

@@ -1,0 +1,12 @@
+namespace: observability
+resources:
+- namespace.yaml
+- grafana-secret.yaml
+bases:
+- ../base/prometheus-operator
+- ../base/thanos
+- ../base/grafana-loki
+patchesStrategicMerge:
+- prometheus-operator-patch.yaml
+- thanos-patch.yaml
+- grafana-loki-patch.yaml
