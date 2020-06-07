@@ -1,6 +1,6 @@
 # k8s-gitops-manifests
 
-[![test](https://github.com/bcochofel/k8s-gitops-manifests/workflows/test/badge.svg)](https://github.com/bcochofel/k8s-gitops-manifests/blob/master/.github/workflows/test.yml)
+[![Validate Scenarios](https://github.com/bcochofel/k8s-gitops-manifests/workflows/Validate%20Scenarios/badge.svg)](https://github.com/bcochofel/k8s-gitops-manifests/blob/master/.github/workflows/validate.yml)
 [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
 [![GitHub license](https://img.shields.io/github/license/bcochofel/k8s-gitops-manifests.svg)](https://github.com/bcochofel/k8s-gitops-manifests/blob/master/LICENSE)
 [![GitHub tag (latest by date)](https://img.shields.io/github/v/tag/bcochofel/k8s-gitops-manifests)](https://github.com/bcochofel/k8s-gitops-manifests/tags)

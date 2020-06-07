@@ -1,5 +1,5 @@
+name: Validate Scenarios
 on: [push, pull_request]
-name: test
 jobs:
   validate:
     runs-on: ubuntu-latest
@@ -15,5 +15,7 @@ jobs:
           # https://github.com/fluxcd/helm-operator/blob/master/docker/helm.version
           helm: 2.14.3
           command: |
-            echo "Validating kustomize traefik..."
+            echo "Validating kustomize traefik scenario..."
             kustomize build kustomize/traefik | kubeval --strict --ignore-missing-schemas
+            echo "Validating kustomize observability scenario..."
+            kustomize build kustomize/observability | kubeval --strict --ignore-missing-schemas
