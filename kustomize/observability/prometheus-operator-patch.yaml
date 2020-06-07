@@ -17,6 +17,27 @@ spec:
         passwordKey: admin-password
       image:
         tag: 7.0.3
+      sidecar:
+        datasources:
+          defaultDatasourceEnabled: false
+      additionalDataSources:
+      - name: Thanos
+        type: prometheus
+        url: http://thanos-query-http:10902
+        access: proxy
+        isDefault: true
+      - name: Prometheus
+        type: prometheus
+        url: http://prometheus-operator-prometheus:9090
+        access: proxy
+      - name: Loki
+        type: Loki
+        access: proxy
+        url: http://loki:3100
+      - name: Jaeger
+        type: Jaeger
+        access: proxy
+        url: http://jaeger-operator-jaeger-operator:16686
     prometheus:
       prometheusSpec:
         scrapeInterval: 15s

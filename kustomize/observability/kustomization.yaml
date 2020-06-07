@@ -2,7 +2,6 @@ namespace: observability
 resources:
 - namespace.yaml
 - grafana-secret.yaml
-- grafana-additional-datasources.yaml
 bases:
 - ../base/prometheus-operator
 - ../base/thanos
