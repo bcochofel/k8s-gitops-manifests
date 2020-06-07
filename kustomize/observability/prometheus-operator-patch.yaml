@@ -17,20 +17,6 @@ spec:
         passwordKey: admin-password
       image:
         tag: 7.0.3
-      sidecar:
-        datasources:
-          defaultDatasourceEnabled: false
-          createPrometheusReplicasDatasources: false
-      additionalDataSources:
-        - name: Thanos
-          type: prometheus
-          url: http://thanos-query-http:10902
-          access: proxy
-          isDefault: true
-        - name: Prometheus
-          type: prometheus
-          url: http://prometheus-operated:9090
-          access: proxy
     prometheus:
       prometheusSpec:
         scrapeInterval: 15s
