@@ -7,8 +7,14 @@ spec:
   values:
     loki:
       enabled: true
+      serviceMonitor:
+        enabled: true
+        interval: "15s"
     promtail:
       enabled: true
+      serviceMonitor:
+        enabled: true
+        interval: "15s"
     fluent-bit:
       enabled: false
     grafana:
