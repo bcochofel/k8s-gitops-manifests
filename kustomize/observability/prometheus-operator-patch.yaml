@@ -19,8 +19,30 @@ spec:
         tag: 7.0.3
       sidecar:
         datasources:
-          enabled: false
           defaultDatasourceEnabled: false
+          createPrometheusReplicasDatasources: false
+      additionalDataSources:
+        - name: Thanos
+          type: prometheus
+          orgId: 1
+          access: proxy
+          url: http://thanos-query-http:10902
+          isDefault: true
+        - name: Prometheus
+          type: prometheus
+          orgId: 1
+          access: proxy
+          url: http://prometheus-operated:9090
+        - name: Loki
+          type: Loki
+          orgId: 1
+          access: proxy
+          url: http://loki:3100
+        - name: Jaeger
+          type: Jaeger
+          orgId: 1
+          access: proxy
+          url: http://jaeger-operator-jaeger-query:16686
     prometheus:
       prometheusSpec:
         scrapeInterval: 15s
