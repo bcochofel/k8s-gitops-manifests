@@ -1,0 +1,15 @@
+---
+apiVersion: helm.fluxcd.io/v1
+kind: HelmRelease
+metadata:
+  name: jaeger-operator
+spec:
+  values:
+    image:
+      tag: 1.18.0
+    crd:
+      install: true
+    jaeger:
+      create: true
+      spec:
+        strategy: allInOne

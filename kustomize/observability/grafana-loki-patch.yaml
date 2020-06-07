@@ -12,6 +12,8 @@ spec:
         interval: "15s"
         additionalLabels:
           release: prometheus-operator
+      tracing:
+        jaegerAgentHost: jaeger-operator-jaeger-agent
     promtail:
       enabled: true
       serviceMonitor:
