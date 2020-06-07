@@ -30,6 +30,8 @@ spec:
         # Enable ServiceMonitor https://github.com/coreos/prometheus-operator
         serviceMonitor:
           enabled: true
+          labels:
+            release: prometheus-operator
 
     compact:
       enabled: false

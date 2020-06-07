@@ -10,11 +10,15 @@ spec:
       serviceMonitor:
         enabled: true
         interval: "15s"
+        additionalLabels:
+          release: prometheus-operator
     promtail:
       enabled: true
       serviceMonitor:
         enabled: true
         interval: "15s"
+        additionalLabels:
+          release: prometheus-operator
     fluent-bit:
       enabled: false
     grafana:
