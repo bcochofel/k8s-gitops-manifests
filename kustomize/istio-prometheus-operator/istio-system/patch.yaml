@@ -1,0 +1,11 @@
+---
+apiVersion: helm.fluxcd.io/v1
+kind: HelmRelease
+metadata:
+  name: flagger
+spec:
+  values:
+    metricsServer: http://flagger-prometheus:9090
+    meshProvider: kubernetes
+    prometheus:
+      install: true

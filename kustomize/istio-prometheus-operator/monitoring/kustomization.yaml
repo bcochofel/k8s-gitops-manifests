@@ -1,0 +1,8 @@
+namespace: monitoring
+resources:
+- namespace.yaml
+- grafana-secret.yaml
+bases:
+- ../../base/prometheus-operator
+patchesStrategicMerge:
+- prometheus-operator-patch.yaml

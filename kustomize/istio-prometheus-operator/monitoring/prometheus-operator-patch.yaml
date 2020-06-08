@@ -1,0 +1,85 @@
+---
+apiVersion: helm.fluxcd.io/v1
+kind: HelmRelease
+metadata:
+  name: prometheus-operator
+spec:
+  values:
+    alertmanager:
+      alertmanagerSpec:
+        image:
+          tag: v0.20.0
+        replicas: 1
+    grafana:
+      admin:
+        existingSecret: grafana
+        userKey: admin-user
+        passwordKey: admin-password
+      image:
+        tag: 7.0.3
+      dashboardProviders:
+        dashboardproviders.yaml:
+          apiVersion: 1
+          providers:
+          - name: 'istio'
+            orgId: 1
+            folder: 'istio'
+            type: file
+            disableDeletion: true
+            editable: false
+            options:
+              path: /var/lib/grafana/dashboards/istio
+      dashboards:
+        istio:
+          istio-workload:
+            gnetId: 7630
+            revision: 2
+            datasource: Prometheus
+          istio-mesh:
+            gnetId: 7639
+            revision: 2
+            datasource: Prometheus
+          istio-service:
+            gnetId: 7636
+            revision: 2
+            datasource: Prometheus
+          istio-control-plane:
+            gnetId: 7645
+            revision: 2
+            datasource: Prometheus
+          istio-mixer:
+            gnetId: 7642
+            revision: 2
+            datasource: Prometheus
+          istio-galley:
+            gnetId: 7648
+            revision: 2
+            datasource: Prometheus
+          istio-performance:
+            gnetId: 12153
+            revision: 1
+            datasource: Prometheus
+          istio-pilot:
+            gnetId: 12154
+            revision: 1
+            datasource: Prometheus
+    prometheus:
+      prometheusSpec:
+        scrapeInterval: 15s
+        scrapeTimeout: 10s
+        evaluationInterval: 15s
+        retention: 6h
+        image:
+          tag: v2.18.1
+        replicas: 1
+        ruleSelector:
+          matchLabels:
+            tier: cluster
+        serviceMonitorSelector:
+          matchLabels:
+            tier: cluster
+        remoteWriteDashboards: false
+    kubeEtcd:
+      enabled: false
+    kubeProxy:
+      enabled: false

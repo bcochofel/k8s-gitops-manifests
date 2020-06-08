@@ -4,6 +4,7 @@ Components:
 - Prometheus Operator
 - Thanos
 - Grafana Loki
+- Jaeger Operator
 
 ## Prometheus Operator
 
@@ -34,3 +35,7 @@ replicas.
 ## Loki
 
 Loki deploys with promtail.
+
+## Jaeger Operator
+
+Deploys AllInOne Jaeger instance.
